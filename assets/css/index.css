@@ -5,6 +5,28 @@ body {
   overflow-x: hidden;
 }
 
+.preloader {
+  position: fixed;
+  inset: 0px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 95%);
+  transition: all 0.3s ease 0s;
+}
+.preloader img {
+  max-width: 300px;
+  animation: preload 2s linear infinite alternate;
+}
+
+@keyframes preload {
+  0%{transform: translateY(-10px);}
+  100%{transform: translateY(10px);}
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -675,10 +697,10 @@ a:hover {
     display: none;
   }
   .img-footer-uto {
-    width: 70%;
+    width: 60%;
   }
   .img-footer-uniontek {
-    width: 70%;
+    width: 100%;
   }
 }
 @media (max-width: 1400px) {
@@ -694,6 +716,19 @@ a:hover {
   }
   .logo-icon-footer a img {
     width: 85px;
+  }
+  .navbar{
+    height: 100px;
+  }
+  button.navbar-toggler.collapsed:focus{
+    box-shadow: none;
+    border: none;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .section-footer{
+    padding: 10px 0px;
   }
 }
 

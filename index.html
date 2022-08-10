@@ -24,6 +24,9 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <img src="/assets/img/Unilucky logo.png" class="img-fluid" alt="...">
+    </div>
 
     <!-- navbar-light bg-light -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent">
@@ -841,7 +844,7 @@
 
         </div>
         <a href="#" class="img-banner ">
-            <img src="./assets/img/SH.jpg" class="img-fluid pt-3"  alt="">
+            <img src="./assets/img/SH.jpg" class="img-fluid pt-3" alt="">
         </a>
 
         <div class="container">
@@ -1504,6 +1507,15 @@
         }
 
         startTimer(55 * 3600); // 4 minutes in seconds
+
+
+
+        // preloader
+        window.onload = function () {
+            setInterval(function () {
+                document.querySelector(".preloader").style.display = "none";
+            }, 500);
+        }
     </script>
 </body>
 
