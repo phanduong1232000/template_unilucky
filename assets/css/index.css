@@ -4,6 +4,9 @@
 body {
   overflow-x: hidden;
 }
+h4 {
+  margin-bottom: 0px;
+}
 
 .preloader {
   position: fixed;
@@ -22,10 +25,13 @@ body {
 }
 
 @keyframes preload {
-  0%{transform: translateY(-10px);}
-  100%{transform: translateY(10px);}
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
-
 
 * {
   margin: 0px;
@@ -84,7 +90,7 @@ p {
   z-index: 100;
   padding: 0px;
   border-width: 0px;
-  background: linear-gradient(176deg, #164499, rgba(43, 57, 144, 1) 100%);
+  background: #164499;
   height: 80px;
 }
 
@@ -116,6 +122,12 @@ p {
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
+.navbar .badge {
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  transform: translateY(-3px);
+}
 
 .navbar a:hover {
   color: #117964;
@@ -134,14 +146,61 @@ li.col-md-4.col-sm-12 {
 li.col-md-4.col-sm-12:hover {
   transform: scale(1.1);
 }
+.avt-drop {
+  right: 36% !important;
+  margin-top: 0rem !important;
+  width: 20%;
+  left: 80% !important;
+  background-color: #164499;
+  border: none;
+  border-radius: unset;
+}
+.avt-drop .dropdown-item {
+  color: white;
+  transition: 0.2s;
+}
+
+.avt-drop-menu .dropdown-item {
+  color: white;
+  transition: 0.2s;
+}
+.avt-drop-menu li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.418);
+}
+.badge {
+  background-color: #fdb63f;
+  color: #000;
+  font-size: 0.8rem;
+}
+.monney {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: white;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.avt-drop li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.418);
+}
+.avt-drop .dropdown-item:hover {
+  background: white;
+  color: black !important;
+}
 
 /* footer */
 
 /* ============================== */
 .search-custom {
-  min-width: 670px;
-  padding-right: 155px;
+  width: 100%;
+  padding-right: 15px;
   height: 0px;
+  min-width: 500px;
 }
 .search-custom .form-control {
   height: 31px !important;
@@ -184,8 +243,8 @@ li.col-md-4.col-sm-12:hover {
 }
 
 .dropdown-menu[data-bs-popper] {
-  right: 36% !important;
-  margin-top: 3rem !important;
+  right: 36%;
+  margin-top: 3rem;
 }
 .cart-custom i.fa-solid.fa-cart-arrow-down {
   font-size: 1.5rem;
@@ -193,11 +252,12 @@ li.col-md-4.col-sm-12:hover {
   padding: 10px;
 }
 .avatar-custom {
+  color: white;
+  cursor: pointer;
+  min-width: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 210px;
-  color: white;
 }
 .avatar-custom img {
   width: 45px;
@@ -209,7 +269,7 @@ li.col-md-4.col-sm-12:hover {
   padding-top: 100px;
 }
 .main-detail {
-  padding-top:80px;
+  padding-top: 80px;
   background-color: #f1f1f1;
   overflow-x: hidden;
 }
@@ -266,9 +326,13 @@ li.col-md-4.col-sm-12:hover {
 .title-cate h3:nth-child(1) {
   font-weight: bold;
 }
-.title-cate h3:nth-child(2) {
+.title-cate a {
   font-weight: bold;
   color: #164499;
+  font-size: 1.5rem;
+}
+.title-cate a:hover {
+  color: #164499 !important;
 }
 @media (max-width: 600px) {
   .container-gird .item3 {
@@ -351,6 +415,7 @@ span {
   padding: 30px;
   height: 220px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .owl-carousel .item img {
   width: 50% !important;
@@ -562,7 +627,21 @@ span.navbar-toggler-icon {
 a:hover {
   color: white !important;
 }
-
+.btn-custom-nav {
+  border: 1px solid rgba(255, 255, 255, 0.267) !important;
+  outline: none;
+}
+.btn-custom-nav:focus {
+  outline: none;
+  box-shadow: none;
+}
+div#offcanvasExample {
+  background: #164499;
+}
+button.btn-close.text-reset {
+  filter: invert(1);
+  font-size: 24px;
+}
 /* -===============detail ========= */
 .breadcrumb-custom li a {
   font-size: 1.2rem;
@@ -624,10 +703,23 @@ a:hover {
     margin-top: 33px;
   }
 }
+@media (min-width: 992px) {
+  button.btn.btn-custom-nav {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  button.navbar-toggler.me-4 {
+    display: none;
+  }
+  .avatar-custom {
+    padding-top: 10px;
+  }
+}
 
 @media (max-width: 600px) {
   .owl-carousel .item img {
-    width: 75% !important;
+    width: 50% !important;
   }
   .search-custom {
     min-width: unset;
@@ -638,12 +730,10 @@ a:hover {
   }
   .avatar-custom {
     min-width: unset;
+    display: block;
   }
   .avatar-custom p {
     display: none;
-  }
-  .navbar-nav {
-    flex-direction: row;
   }
   .search-custom .filter-item {
     min-width: unset;
@@ -717,17 +807,18 @@ a:hover {
   .logo-icon-footer a img {
     width: 85px;
   }
-  .navbar{
-    height: 100px;
+  .navbar {
+    height: 80px;
+    padding: 10px;
   }
-  button.navbar-toggler.collapsed:focus{
+  button.navbar-toggler.collapsed:focus {
     box-shadow: none;
     border: none;
   }
-  .navbar-toggler:focus{
+  .navbar-toggler:focus {
     box-shadow: none;
   }
-  .section-footer{
+  .section-footer {
     padding: 10px 0px;
   }
 }
@@ -1160,4 +1251,54 @@ p.number-check bdi {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+/* login */
+.main-login {
+  background: url(../img/bg.jpg);
+  background-size: cover;
+}
+.btn-gradient-modal-login {
+  background: linear-gradient(
+    76deg,
+    rgba(255, 212, 0, 1) 0%,
+    rgba(255, 136, 0, 1) 100%
+  );
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: .5s;
+}
+.btn-gradient-modal-signin {
+  background: linear-gradient(76deg, #0262e8 0%, #0279ec 100%);
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: .5s;
+}
+.btn-gradient-modal-signin:hover{
+  color: white !important;
+  transform: scale(1.05);  
+}
+.btn-gradient-modal-login:hover {
+  transform: scale(1.05);
+
+}
+.card-bg-form {
+  background: url(../img/bg-login.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.card-bg {
+  background: none;
+  color: white;
 }
