@@ -1302,3 +1302,21 @@ p.number-check bdi {
   background: none;
   color: white;
 }
+
+
+
+
+
+
+@keyframes my { 
+  0% { color: #F8CD0A;  } 
+  50% { color: #fff;  }
+  100% { color: #F8CD0A;  } 
+} 
+.nhapnhay {   
+  font-weight:bold;
+  animation: my 700ms infinite;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
